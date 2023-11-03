@@ -1,0 +1,46 @@
+- squehub/
+  - sq-admin/
+    - css/
+    - js/
+    - ...
+  - sq-content/
+    - themes/
+      - sq-default-theme/
+        - css/
+        - js/
+        - ...
+      - ...
+    - plugins/
+      - sq-example-plugin/
+        - sq-example-plugin.php
+        - includes/
+          - ...
+        - assets/
+          - css/
+          - js/
+          - ...
+        - ...
+      - ...
+    - uploads/
+  - sq-includes/
+    - sq-classes/
+    - sq-functions.php
+    - ...
+  - sq-languages/            # Directory for language catalogs
+    - en_US/
+      - LC_MESSAGES/
+        - messages.mo       # Compiled message catalog for English (US)
+        - messages.po       # Human-readable message catalog for English (US)
+    - fr_FR/
+      - LC_MESSAGES/
+        - messages.mo       # Compiled message catalog for French (France)
+        - messages.po       # Human-readable message catalog for French (France)
+    - de_DE/
+      - LC_MESSAGES/
+        - messages.mo       # Compiled message catalog for German (Germany)
+        - messages.po       # Human-readable message catalog for German (Germany)
+    - ...
+  - index.php
+  - sq-login.php
+  - sq-config.php
+  - ...

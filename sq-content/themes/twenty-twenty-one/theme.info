@@ -1,0 +1,9 @@
+
+name = twenty twenty one
+description = A clean and modern theme for SqueHub CMS
+author = John Doe olks
+version = 1.0.0
+created = 2023-10-26
+updated = 2023-10-26
+tags = clean, modern, responsivess
+text-domain = squehub-theme

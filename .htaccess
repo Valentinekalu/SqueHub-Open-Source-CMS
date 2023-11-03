@@ -1,0 +1,31 @@
+RewriteEngine On
+Options -Indexes
+
+# Redirect all requests to index.php except for existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+# Exclude requests for files in "/assets/" directory
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} \.(js|css|scss|jpg|jpeg|png)$ [NC]
+RewriteRule .* - [L]
+# Exclude requests for files in "/sq-admin/assets/" directory
+RewriteCond %{REQUEST_URI} ^/sq-admin/assets/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} \.(js|css|scss|jpg|jpeg|png)$ [NC]
+RewriteRule .* - [L]
+
+# Redirect requests for any file in "/sh-admin" directory to 404.php
+RewriteCond %{REQUEST_URI} ^/sq-admin/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* /404.php [L]
+
+
+# Redirect requests for any file in "/sq-includes" directory to 404.php
+RewriteCond %{REQUEST_URI} ^/sq-includes/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* /404.php [L]
+#RewriteRule ^ - [R=404,L]

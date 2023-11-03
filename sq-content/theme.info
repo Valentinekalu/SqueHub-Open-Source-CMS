@@ -1,0 +1,9 @@
+
+name = squeHub theme one
+description = A clean and modern theme for SqueHub CMS
+author = John Doe 1
+version = 1.0.0
+created = 2023-10-26
+updated = 2023-10-26
+tags = clean, modern, responsive
+text-domain = squehub-theme

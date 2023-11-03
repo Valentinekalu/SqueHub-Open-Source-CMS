@@ -1,0 +1,97 @@
+.sidebar {
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999999;
+}
+
+.custom-nav-fixed {
+    position: static;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%; /* Set the desired width in pixels, e.g., width: 960px; */
+    z-index: 999; /* Adjust the z-index as needed to ensure it appears above other elements */
+}
+
+
+
+.sidebar-content {
+  padding-left: 20px;
+}
+
+.sidebar-content .branding {
+    margin: 5px 20px 5px 60px;
+}
+
+.toggle-button-custom{
+    display: none;
+    background: transparent;
+    border: 0;
+}
+
+
+/* Back arrow for closing the sidebar */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    right: 1px;
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Initially hidden */
+}
+
+.back-arrow .ti {
+    font-size: 40px;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .toggle-button-custom{
+        display: block;
+    }
+
+    .back-arrow {
+        display: block; /* Show the back arrow on mobile */
+    }
+
+    .custom-nav-fixed {
+        position: fixed;
+    }
+
+    .main-content {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .toggle-button-custom{
+        display: none;
+    }
+    
+    .custom-nav-fixed {
+        position: fixed;
+    }
+    
+    .custom-nav-fixed {
+        position: fixed;
+    }
+
+    .main-content {
+        padding-top: 50px;
+    }
+    
+
+}
